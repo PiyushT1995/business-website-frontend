@@ -1,0 +1,92 @@
+/* ================================
+   About Page Styles (about.css)
+   ================================ */
+
+/* ===== HERO ===== */
+.about-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../images/banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 1rem;
+}
+.about-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.about-hero-content p {
+  font-size: 1.2rem;
+}
+
+/* ===== MISSION & VISION ===== */
+.mission-vision {
+  background: var(--light-bg);
+}
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.mv-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+.mv-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* ===== COMPANY STORY ===== */
+.company-story p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.download-brochure .btn {
+  background: var(--primary);
+}
+.download-brochure .btn:hover {
+  background: var(--primary-dark);
+}
+
+/* ===== TEAM SECTION ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-card {
+  background: var(--white);
+  border-radius: 12px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+}
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.team-card h3 {
+  margin: 0.5rem 0;
+  color: var(--primary);
+}
+.team-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
