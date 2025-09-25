@@ -1,131 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JASIQ — Home</title>
-  <meta name="description" content="Modern responsive business website built with HTML, CSS, and JavaScript.">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/css/base.css" />
+  <link rel="stylesheet" href="../src/css/layout.css" />
+  <link rel="stylesheet" href="../src/css/components.css" />
 </head>
 <body>
+  
+  <!-- Accessibility: Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header & Navbar -->
+  <!-- ✅ Header / Navbar -->
   <header class="site-header">
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
       <a href="index.html" class="logo">JASIQ</a>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">☰</button>
+      
+      <!-- Mobile toggle -->
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        ☰
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- ✅ Main Content -->
+  <main id="main-content">
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="hero-content">
-        <h1>Modern Solutions for Growing Businesses</h1>
-        <p>Design. Build. Grow.</p>
+        <h1>Welcome to JASIQ</h1>
+        <p>We build modern, responsive business websites and digital solutions 🚀</p>
         <div class="hero-cta">
           <a href="services.html" class="btn primary">Our Services</a>
           <a href="contact.html" class="btn">Get a Quote</a>
         </div>
       </div>
-      <div class="hero-video">
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Intro Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-          </iframe>
-        </div>
-      </div>
     </section>
 
-    <!-- Features / Services Highlights -->
-    <section class="features">
-      <h2>Our Key Services</h2>
-      <div class="feature-cards">
-        <div class="card">
-          <img src="assets/images/service1.png" alt="Web Development">
+    <!-- Services Section -->
+    <section class="services-preview" id="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="assets/images/webdev.png" alt="Web Development icon" />
           <h3>Web Development</h3>
-          <p>Build responsive and modern websites tailored to your business needs.</p>
-        </div>
-        <div class="card">
-          <img src="assets/images/service2.png" alt="Digital Marketing">
-          <h3>Digital Marketing</h3>
-          <p>Grow your business online with effective marketing strategies.</p>
-        </div>
-        <div class="card">
-          <img src="assets/images/service3.png" alt="UI/UX Design">
+          <p>Custom responsive websites built with modern technologies.</p>
+        </article>
+        <article class="service-card">
+          <img src="assets/images/uiux.png" alt="UI/UX Design icon" />
           <h3>UI/UX Design</h3>
-          <p>Create user-friendly designs that enhance user experience.</p>
-        </div>
+          <p>Intuitive, user-friendly designs that engage customers.</p>
+        </article>
+        <article class="service-card">
+          <img src="assets/images/seo.png" alt="SEO icon" />
+          <h3>SEO Optimization</h3>
+          <p>Boost your search rankings and reach the right audience.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Portfolio Highlights -->
-    <section class="portfolio">
-      <h2>Featured Projects</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="assets/images/project1.jpg" alt="Project 1">
-          <div class="overlay">
-            <h3>Project Title 1</h3>
-            <a href="portfolio.html" class="btn small">View Project</a>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img src="assets/images/project2.jpg" alt="Project 2">
-          <div class="overlay">
-            <h3>Project Title 2</h3>
-            <a href="portfolio.html" class="btn small">View Project</a>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <img src="assets/images/project3.jpg" alt="Project 3">
-          <div class="overlay">
-            <h3>Project Title 3</h3>
-            <a href="portfolio.html" class="btn small">View Project</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about">
+    <!-- About Preview -->
+    <section class="about-preview" id="about">
       <h2>About Us</h2>
-      <p>JASIQ is dedicated to providing modern and effective business solutions. Our team of experts delivers innovative projects that help businesses grow online.</p>
+      <p>At JASIQ, we are passionate about building digital solutions that empower businesses to grow. With a team of creative developers and designers, we bring ideas to life.</p>
       <a href="about.html" class="btn">Learn More</a>
     </section>
 
-    <!-- Newsletter Signup -->
+    <!-- Portfolio Preview -->
+    <section class="portfolio-preview" id="portfolio">
+      <h2>Our Work</h2>
+      <div class="portfolio-grid">
+        <figure>
+          <img src="assets/images/project1.jpg" alt="Project 1" />
+          <figcaption>Project One</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/project2.jpg" alt="Project 2" />
+          <figcaption>Project Two</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/project3.jpg" alt="Project 3" />
+          <figcaption>Project Three</figcaption>
+        </figure>
+      </div>
+      <a href="portfolio.html" class="btn">View All Projects</a>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-card">
+        <p>"JASIQ transformed our online presence. The website is fast, modern, and user-friendly."</p>
+        <strong>- Sarah Johnson, CEO of BrightTech</strong>
+      </div>
+      <div class="testimonial-card">
+        <p>"The team understood our needs perfectly. Highly recommend JASIQ!"</p>
+        <strong>- Michael Lee, Founder of StartNow</strong>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2>Ready to grow your business?</h2>
+      <p>Let’s build something amazing together.</p>
+      <a href="contact.html" class="btn primary">Contact Us</a>
+    </section>
+
+    <!-- Newsletter -->
     <section class="newsletter">
       <h2>Subscribe to Our Newsletter</h2>
       <form id="newsletter-form">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn primary">Subscribe</button>
+        <input type="email" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
       </form>
     </section>
+
   </main>
 
-  <!-- Footer -->
+  <!-- ✅ Footer -->
   <footer class="site-footer">
-    <div class="footer-content">
+    <div class="footer-container">
+      <section class="footer-about">
+        <h3>About JASIQ</h3>
+        <p>We build modern, responsive websites and digital solutions that help businesses grow online.</p>
+      </section>
+      
+      <nav class="footer-links" aria-label="Footer Quick Links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <section class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Twitter">Tw</a>
+          <a href="#" aria-label="LinkedIn">Ln</a>
+        </div>
+      </section>
+    </div>
+    
+    <div class="footer-bottom">
       <p>&copy; 2025 JASIQ. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook">Fb</a>
-        <a href="#" aria-label="Twitter">Tw</a>
-        <a href="#" aria-label="LinkedIn">Ln</a>
-      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="js/main.js" defer></script>
+  <!-- JS -->
+  <script src="../src/js/main.js" defer></script>
 </body>
 </html>
