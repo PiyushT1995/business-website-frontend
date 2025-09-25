@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JASIQ — Home</title>
+  <meta name="description" content="Modern responsive business website built with HTML, CSS, and JavaScript.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+  <header class="site-header">
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="logo">JASIQ</a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Modern Solutions for Growing Businesses</h1>
+        <p>Design. Build. Grow.</p>
+        <div class="hero-cta">
+          <a href="services.html" class="btn primary">Our Services</a>
+          <a href="contact.html" class="btn">Get a Quote</a>
+        </div>
+      </div>
+      <div class="hero-video">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Intro Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features / Services Highlights -->
+    <section class="features">
+      <h2>Our Key Services</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <img src="assets/images/service1.png" alt="Web Development">
+          <h3>Web Development</h3>
+          <p>Build responsive and modern websites tailored to your business needs.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/service2.png" alt="Digital Marketing">
+          <h3>Digital Marketing</h3>
+          <p>Grow your business online with effective marketing strategies.</p>
+        </div>
+        <div class="card">
+          <img src="assets/images/service3.png" alt="UI/UX Design">
+          <h3>UI/UX Design</h3>
+          <p>Create user-friendly designs that enhance user experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Highlights -->
+    <section class="portfolio">
+      <h2>Featured Projects</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="assets/images/project1.jpg" alt="Project 1">
+          <div class="overlay">
+            <h3>Project Title 1</h3>
+            <a href="portfolio.html" class="btn small">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/images/project2.jpg" alt="Project 2">
+          <div class="overlay">
+            <h3>Project Title 2</h3>
+            <a href="portfolio.html" class="btn small">View Project</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="assets/images/project3.jpg" alt="Project 3">
+          <div class="overlay">
+            <h3>Project Title 3</h3>
+            <a href="portfolio.html" class="btn small">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Us</h2>
+      <p>JASIQ is dedicated to providing modern and effective business solutions. Our team of experts delivers innovative projects that help businesses grow online.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="newsletter-form">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn primary">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 JASIQ. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">Fb</a>
+        <a href="#" aria-label="Twitter">Tw</a>
+        <a href="#" aria-label="LinkedIn">Ln</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
