@@ -1,0 +1,99 @@
+:root {
+  --primary: #007BFF;
+  --primary-dark: #0056b3;
+  --accent: #FF9800;
+  --light-bg: #F8FAFF;
+  --dark-bg: #222;
+  --text-primary: #222;
+  --text-muted: #555;
+  --white: #FFFFFF;
+}
+
+/* Global Reset / Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text-primary);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: #e68900; /* darker orange */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--dark-bg);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
+
+footer .social-links a {
+  color: var(--white);
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: var(--primary);
+}
