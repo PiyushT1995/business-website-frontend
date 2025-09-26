@@ -48,12 +48,14 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h3>Contact Form</h3>
-        <form id="contactForm">
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        <form id="contactForm" action="https://formspree.io/f/mkgqglla" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
+        <p id="form-status"></p>
+
         <p id="form-status"></p>
       </div>
 
