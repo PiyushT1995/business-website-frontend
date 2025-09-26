@@ -5,10 +5,12 @@
 /* Tablet (up to 992px) */
 @media (max-width: 992px) {
   /* Hero */
-  .hero-content h2 {
+  .hero-content h2,
+  .services-hero h2 {
     font-size: 2.5rem;
   }
-  .hero-content p {
+  .hero-content p,
+  .services-hero p {
     font-size: 1.1rem;
   }
 
@@ -19,11 +21,12 @@
 
   /* Highlight & Product Grids */
   .highlight-grid,
-  .product-grid {
+  .product-grid,
+  .category-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  /* About: Mission & Vision side by side → tighter spacing */
+  /* About: Mission & Vision */
   .mission-vision .container {
     gap: 20px;
   }
@@ -39,9 +42,9 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #222; /* Dark gray (matches navbar) */
+    background: #222;
     position: absolute;
-    top: 70px; /* just below navbar */
+    top: 70px;
     left: 0;
     padding: 10px 0;
   }
@@ -54,13 +57,16 @@
   }
 
   /* Hero */
-  .hero {
+  .hero,
+  .services-hero {
     padding: 100px 20px;
   }
-  .hero-content h2 {
+  .hero-content h2,
+  .services-hero h2 {
     font-size: 2rem;
   }
-  .hero-content p {
+  .hero-content p,
+  .services-hero p {
     font-size: 1rem;
   }
   .cta-buttons .btn {
@@ -70,10 +76,11 @@
     max-width: 250px;
   }
 
-  /* Highlights & Products */
+  /* Highlights, Products, Categories */
   .highlight-grid,
-  .product-grid {
-    grid-template-columns: 1fr; /* stack */
+  .product-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
   }
 
   /* Video Section */
@@ -86,32 +93,46 @@
     text-align: center;
   }
 
-  /* About Page Adjustments */
+  /* About */
   .mission-vision .container {
-    grid-template-columns: 1fr; /* stack Mission & Vision */
+    grid-template-columns: 1fr;
     text-align: center;
   }
   .values-grid {
-    grid-template-columns: 1fr 1fr; /* 2 per row */
+    grid-template-columns: 1fr 1fr;
   }
   .stats {
-    flex-direction: column; /* stack stats */
+    flex-direction: column;
     gap: 20px;
   }
   .team-grid {
-    grid-template-columns: 1fr 1fr; /* 2 members per row */
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Services - Custom Printing */
+  .custom-printing {
+    padding: 60px 20px;
+  }
+  .custom-printing h3 {
+    font-size: 1.8rem;
+  }
+  .custom-printing p {
+    font-size: 1rem;
   }
 }
 
 /* Small Mobile (up to 480px) */
 @media (max-width: 480px) {
-  .hero {
+  .hero,
+  .services-hero {
     padding: 80px 15px;
   }
-  .hero-content h2 {
+  .hero-content h2,
+  .services-hero h2 {
     font-size: 1.8rem;
   }
-  .hero-content p {
+  .hero-content p,
+  .services-hero p {
     font-size: 0.95rem;
   }
 
@@ -130,17 +151,31 @@
     margin: 5px 8px;
   }
 
-  /* About Page Adjustments */
+  /* About */
   .values-grid {
-    grid-template-columns: 1fr; /* stack values vertically */
+    grid-template-columns: 1fr;
   }
   .team-grid {
-    grid-template-columns: 1fr; /* 1 member per row */
+    grid-template-columns: 1fr;
   }
   .about-cta h3 {
     font-size: 1.5rem;
   }
   .about-cta p {
+    font-size: 1rem;
+  }
+
+  /* Services - Custom Printing */
+  .custom-printing h3 {
+    font-size: 1.5rem;
+  }
+  .custom-printing p {
+    font-size: 0.95rem;
+  }
+  .product-guide h3 {
+    font-size: 1.5rem;
+  }
+  .product-guide p {
     font-size: 1rem;
   }
 }
@@ -150,9 +185,10 @@
   .btn:active,
   .highlight-card:active,
   .product-card:active,
+  .category-card:active,
   .value-card:active,
   .stat-card:active,
   .team-card:active {
-    transform: scale(0.97); /* subtle tap feedback */
+    transform: scale(0.97);
   }
 }
