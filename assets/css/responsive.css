@@ -9,14 +9,16 @@
   .services-hero h2,
   .portfolio-hero h2,
   .blog-hero h2,
-  .contact-hero h2 {
+  .contact-hero h2,
+  .faq-hero h2 {
     font-size: 2.3rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
   .blog-hero p,
-  .contact-hero p {
+  .contact-hero p,
+  .faq-hero p {
     font-size: 1.1rem;
   }
 
@@ -34,12 +36,12 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  /* About: Mission & Vision */
+  /* About */
   .mission-vision .container {
     gap: 20px;
   }
 
-  /* Portfolio: Slider */
+  /* Portfolio */
   .slider {
     max-width: 700px;
   }
@@ -47,6 +49,11 @@
   /* Contact */
   .contact-grid {
     gap: 20px;
+  }
+
+  /* FAQ */
+  .testimonial-slider {
+    max-width: 600px;
   }
 }
 
@@ -79,21 +86,24 @@
   .services-hero,
   .portfolio-hero,
   .blog-hero,
-  .contact-hero {
+  .contact-hero,
+  .faq-hero {
     padding: 100px 20px;
   }
   .hero-content h2,
   .services-hero h2,
   .portfolio-hero h2,
   .blog-hero h2,
-  .contact-hero h2 {
+  .contact-hero h2,
+  .faq-hero h2 {
     font-size: 2rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
   .blog-hero p,
-  .contact-hero p {
+  .contact-hero p,
+  .faq-hero p {
     font-size: 1rem;
   }
 
@@ -140,7 +150,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Services - Custom Printing */
+  /* Services */
   .custom-printing {
     padding: 60px 20px;
   }
@@ -184,11 +194,24 @@
   .contact-info {
     text-align: center;
   }
-  .contact-form form {
-    width: 100%;
+
+  /* FAQ */
+  .faq-section h3 {
+    font-size: 1.6rem;
   }
-  .contact-info p {
+  .faq-question {
     font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  .testimonial-slider {
+    max-width: 100%;
+  }
+  .prev, .next {
+    font-size: 1rem;
+    padding: 6px 10px;
   }
 }
 
@@ -199,27 +222,25 @@
   .services-hero,
   .portfolio-hero,
   .blog-hero,
-  .contact-hero {
+  .contact-hero,
+  .faq-hero {
     padding: 80px 15px;
   }
   .hero-content h2,
   .services-hero h2,
   .portfolio-hero h2,
   .blog-hero h2,
-  .contact-hero h2 {
+  .contact-hero h2,
+  .faq-hero h2 {
     font-size: 1.6rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
   .blog-hero p,
-  .contact-hero p {
+  .contact-hero p,
+  .faq-hero p {
     font-size: 0.95rem;
-  }
-
-  /* Video Section Text */
-  .video-text p {
-    font-size: 1rem;
   }
 
   /* Footer */
@@ -242,31 +263,19 @@
   .about-cta h3 {
     font-size: 1.5rem;
   }
-  .about-cta p {
-    font-size: 1rem;
-  }
 
   /* Services */
   .custom-printing h3 {
     font-size: 1.5rem;
   }
-  .custom-printing p {
-    font-size: 0.95rem;
-  }
   .product-guide h3 {
     font-size: 1.5rem;
   }
-  .product-guide p {
-    font-size: 1rem;
-  }
 
   /* Portfolio */
-  .portfolio-video video {
-    max-width: 100%;
-  }
   .prev, .next {
-    font-size: 1.5rem;
-    padding: 6px;
+    font-size: 1rem;
+    padding: 5px 8px;
   }
 
   /* Blog */
@@ -283,24 +292,29 @@
   .blog-download h3 {
     font-size: 1.4rem;
   }
-  .blog-download p {
-    font-size: 0.9rem;
-  }
 
   /* Contact */
   .contact-form h3,
   .contact-info h3 {
     font-size: 1.5rem;
   }
-  .contact-info p {
+
+  /* FAQ */
+  .faq-hero h2 {
+    font-size: 1.8rem;
+  }
+  .faq-hero p {
+    font-size: 1rem;
+  }
+  .faq-question {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+  .testimonial-card p {
     font-size: 0.9rem;
   }
-  .social-links a {
-    display: inline-block;
-    margin: 5px 8px;
-  }
-  .contact-map h3 {
-    font-size: 1.5rem;
+  .testimonial-card h4 {
+    font-size: 0.9rem;
   }
 }
 
@@ -315,7 +329,9 @@
   .team-card:active,
   .gallery-grid img:active,
   .blog-card:active,
-  .contact-form button:active {
+  .contact-form button:active,
+  .faq-question:active,
+  .testimonial-card:active {
     transform: scale(0.97);
   }
 }

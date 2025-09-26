@@ -1,0 +1,128 @@
+/* =========================
+   FAQ PAGE STYLES
+   ========================= */
+
+/* Hero */
+.faq-hero {
+  background: linear-gradient(rgba(255,102,0,0.7), rgba(0,0,0,0.7)),
+              url('../images/faq-banner.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+.faq-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.faq-hero p {
+  font-size: 1.2rem;
+}
+
+/* FAQ Accordion */
+.faq-section {
+  padding: 60px 20px;
+}
+.faq-section h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff6600;
+}
+.faq-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.faq-question {
+  width: 100%;
+  background: #f8f9fa;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+.faq-question:hover {
+  background: #ff6600;
+  color: #fff;
+}
+.faq-answer {
+  display: none;
+  padding: 15px 20px;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonials h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff6600;
+}
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: auto;
+}
+.testimonial-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.testimonial-card {
+  min-width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 20px;
+  margin: 0 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.testimonial-card p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Slider Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+.prev:hover, .next:hover {
+  background: #e65c00;
+}
+.prev {
+  left: -40px;
+}
+.next {
+  right: -40px;
+}
