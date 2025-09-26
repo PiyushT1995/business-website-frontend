@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart | Anand Sports</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Cart Page CSS -->
+  <link rel="stylesheet" href="assets/css/cart.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Anand Sports Logo" class="logo-img">
+        <h1>Anand Sports</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="services.html">Continue Shopping</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cart Section -->
+  <main class="cart-container">
+    <h2>Your Cart</h2>
+
+    <!-- Cart Table -->
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Unit</th>
+          <th>Qty</th>
+          <th>Subtotal</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- rows are generated dynamically by JS -->
+      </tbody>
+    </table>
+
+    <!-- Cart Total -->
+    <div class="cart-summary">
+      <h3 id="cartTotal">Total: ₹0</h3>
+    </div>
+
+    <!-- Checkout Form -->
+    <section class="checkout-form">
+      <h3>Checkout Details</h3>
+      <form id="orderForm" action="https://formspree.io/f/mkgqglla" method="POST">
+
+        <label>
+          Name
+          <input type="text" name="customer_name" id="customerName" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="customer_email" id="customerEmail" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="customer_phone" id="customerPhone">
+        </label>
+        <label>
+          Address
+          <textarea name="customer_address" id="customerAddress" rows="3"></textarea>
+        </label>
+
+        <!-- Hidden textarea that JS fills with cart details -->
+        <textarea name="order_details" id="orderDetails" style="display:none;"></textarea>
+
+        <div class="checkout-actions">
+          <button type="submit" class="btn-order">Place Order</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- JS -->
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>

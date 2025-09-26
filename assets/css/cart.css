@@ -1,0 +1,120 @@
+/* Cart Container */
+.cart-container {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Table Styling */
+#cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#cartTable th, 
+#cartTable td {
+  border: 1px solid #e6e6e6;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#cartTable th {
+  background: #f7f7f7;
+  font-weight: bold;
+}
+
+#cartTable img {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Cart Summary */
+.cart-summary {
+  text-align: right;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Checkout Form */
+.checkout-form {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.checkout-form h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 0.55rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.checkout-form textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.btn-order {
+  background: #28a745;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.btn-order:hover {
+  background: #218838;
+}
+
+.small-btn {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.small-btn:hover {
+  background: #e6e6e6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #cartTable th, #cartTable td {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  .btn-order {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

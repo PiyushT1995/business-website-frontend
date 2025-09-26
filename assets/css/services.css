@@ -1,123 +1,102 @@
-/* =========================
-   SERVICES / PRODUCTS PAGE STYLES
-   ========================= */
-
-/* Hero Section */
-.services-hero {
-  background: linear-gradient(rgba(255,102,0,0.7), rgba(0,0,0,0.7)),
-              url('../images/hero-banner.jpg') center/cover no-repeat;
+/* HERO (matches other pages' theme) */
+.page-hero {
+  position: relative;
+  text-align: center;
   color: #fff;
-  text-align: center;
-  padding: 100px 20px;
+  padding: 6rem 1rem;
+  background: url("../images/banner-products.jpg") center/cover no-repeat;
 }
-.services-hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.services-hero p {
-  font-size: 1.2rem;
+.page-hero .hero-overlay {
+  background: rgba(0,0,0,0.55);
+  padding: 2rem 2rem;
+  display: inline-block;
+  border-radius: 10px;
 }
 
-/* Product Categories */
-.product-categories {
-  padding: 60px 20px;
-  text-align: center;
+/* CATEGORIES */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+  padding: 0 1rem;
 }
-.product-categories h3 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-}
-.category-card {
-  background: #f1faee;
-  padding: 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s;
-}
-.category-card:hover {
-  transform: translateY(-5px);
-  background: #ff6600;
+.categories .filter-btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #0077cc;
   color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.categories .filter-btn:hover, .categories .filter-btn.active {
+  background: #005fa3;
 }
 
-/* Featured Products */
-.featured-products {
-  padding: 60px 20px;
-  text-align: center;
-}
-.featured-products h3 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-.product-grid {
+/* PRODUCTS GRID */
+.products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
 }
+
 .product-card {
   background: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+  border-radius: 10px;
   text-align: center;
+  padding: 0.9rem;
+  transition: transform 0.22s, box-shadow 0.22s;
+  display: none; /* show via .show */
 }
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+
+.product-card.show {
+  display: block;
 }
-.product-card h4 {
-  margin-bottom: 8px;
-  color: #ff6600;
-}
-.product-card p {
-  font-size: 0.95rem;
-  color: #555;
-}
+
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* Custom Printing Highlight */
-.custom-printing {
-  background: linear-gradient(rgba(255,102,0,0.9), rgba(0,0,0,0.7));
+.product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h4 {
+  margin: 0.6rem 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+.product-card .price {
+  color: #0077cc;
+  font-weight: 700;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.btn-order {
+  background: #ff6b00;
   color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
 }
-.custom-printing h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-.custom-printing p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-.custom-printing .btn {
-  margin-top: 10px;
+.btn-order:hover {
+  background: #e65a00;
 }
 
-/* Product Guide Download */
-.product-guide {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f8f9fa;
-}
-.product-guide h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-.product-guide p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+/* Minor responsive tweaks */
+@media (max-width: 480px) {
+  .page-hero { padding: 4rem 1rem; }
+  .product-card img { height: 140px; }
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | Anand Sports</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Thank You Page CSS -->
+  <link rel="stylesheet" href="assets/css/thankyou.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Anand Sports Logo" class="logo-img">
+        <h1>Anand Sports</h1>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Thank You Section -->
+  <section class="thankyou-container">
+    <h1>🎉 Thank You for Your Order!</h1>
+    <p>Your order has been placed successfully.<br>
+       We’ll contact you soon with confirmation and delivery details.</p>
+    <p>You will be redirected to our Home Page in <span id="countdown">5</span> seconds...</p>
+    <a href="index.html" class="btn">Go to Home Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Anand Sports. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Redirect Script -->
+  <script>
+    let seconds = 5;
+    const countdownEl = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      seconds--;
+      countdownEl.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "index.html"; // redirect to homepage
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

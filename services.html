@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Products | Anand Sports</title>
 
   <!-- Global CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <!-- Services Page CSS -->
-  <link rel="stylesheet" href="assets/css/services.css">
+  <link rel="stylesheet" href="assets/css/services.css" />
   <!-- Responsive CSS -->
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/responsive.css" />
 </head>
 <body>
 
@@ -19,7 +19,6 @@
     <nav class="navbar">
       <div class="logo">
         <img src="assets/images/logo.png" alt="Anand Sports Logo" class="logo-img">
-        <img src="assets/images/mascot.png" alt="Anand Sports Mascot Logo" class="mascot-img">
         <h1>Anand Sports</h1>
       </div>
       <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -31,73 +30,201 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="services-hero">
-    <h2>Our Products</h2>
-    <p>High-quality sports gear, shoes, and custom jerseys tailored for you.</p>
-  </section>
-
-  <!-- Categories -->
-  <section class="product-categories">
-    <div class="container">
-      <h3>Product Categories</h3>
-      <div class="category-grid">
-        <div class="category-card">🏏 Sportswear & Jerseys</div>
-        <div class="category-card">🎽 Custom Printing</div>
-        <div class="category-card">👟 Sports Shoes</div>
-        <div class="category-card">⚽ Accessories</div>
-      </div>
+  <!-- Hero Section (same theme as other pages) -->
+  <section class="page-hero products-hero">
+    <div class="hero-overlay">
+      <h2>Our Products</h2>
+      <p>Shop premium sports gear, jerseys & custom printing.</p>
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="featured-products">
-    <div class="container">
-      <h3>Featured Products</h3>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="assets/images/products/shirt.png" alt="Custom Jersey">
-          <h4>Custom Jerseys</h4>
-          <p>Personalized jerseys with your name & number.</p>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/shoes.png" alt="Sports Shoes">
-          <h4>Sports Shoes</h4>
-          <p>Performance shoes designed for athletes.</p>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/cricket-bat.png" alt="Cricket Bat">
-          <h4>Cricket Gear</h4>
-          <p>Bats, pads, gloves, and accessories.</p>
-        </div>
-        <div class="product-card">
-          <img src="assets/images/products/football.png" alt="Football">
-          <h4>Football</h4>
-          <p>Top-quality footballs for training & matches.</p>
-        </div>
-      </div>
-    </div>
+  <!-- Category Filter (buttons use data-filter; JS attaches listeners) -->
+  <section class="categories">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="sportswear">Sportswear & Jerseys</button>
+    <button class="filter-btn" data-filter="printing">Custom Printing</button>
+    <button class="filter-btn" data-filter="equipment">Sports Equipment</button>
+    <button class="filter-btn" data-filter="footwear">Footwear</button>
   </section>
 
-  <!-- Custom Printing Highlight -->
-  <section class="custom-printing" id="custom-printing">
-    <div class="container">
-      <h3>Customize Your Jersey</h3>
-      <p>Print your name, number, or team logo on high-quality sports jerseys. Perfect for teams, tournaments, or personal use.</p>
-      <a href="contact.html" class="btn">Start Customizing</a>
+  <!-- Products Grid -->
+  <section class="products-grid">
+    <!-- Each .product-card has data attributes: id, name, price, image. -->
+    <!-- SPORTSWEAR (6) -->
+    <div class="product-card sportswear" data-id="sw1" data-name="Cricket Jersey" data-price="999" data-image="assets/images/products/jersey1.jpg">
+      <img src="assets/images/products/jersey1.jpg" alt="Cricket Jersey">
+      <h4>Cricket Jersey</h4>
+      <p class="price">₹999</p>
+      <button class="btn-order">Order Now</button>
     </div>
-  </section>
 
-  <!-- Downloadable Guide -->
-  <section class="product-guide">
-    <div class="container">
-      <h3>Download Our Product Guide</h3>
-      <p>Get detailed information about our products and services.</p>
-      <a href="assets/docs/product-guide.pdf" class="btn" download>Download PDF</a>
+    <div class="product-card sportswear" data-id="sw2" data-name="Football Jersey" data-price="1199" data-image="assets/images/products/football-jersey.jpg">
+      <img src="assets/images/products/football-jersey.jpg" alt="Football Jersey">
+      <h4>Football Jersey</h4>
+      <p class="price">₹1,199</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card sportswear" data-id="sw3" data-name="Basketball Jersey" data-price="1299" data-image="assets/images/products/basketball-jersey.jpg">
+      <img src="assets/images/products/basketball-jersey.jpg" alt="Basketball Jersey">
+      <h4>Basketball Jersey</h4>
+      <p class="price">₹1,299</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card sportswear" data-id="sw4" data-name="Hockey Jersey" data-price="1099" data-image="assets/images/products/hockey-jersey.jpg">
+      <img src="assets/images/products/hockey-jersey.jpg" alt="Hockey Jersey">
+      <h4>Hockey Jersey</h4>
+      <p class="price">₹1,099</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card sportswear" data-id="sw5" data-name="Running Kit" data-price="1499" data-image="assets/images/products/running-kit.jpg">
+      <img src="assets/images/products/running-kit.jpg" alt="Running Kit">
+      <h4>Running Kit</h4>
+      <p class="price">₹1,499</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card sportswear" data-id="sw6" data-name="Training Jersey" data-price="899" data-image="assets/images/products/training-jersey.jpg">
+      <img src="assets/images/products/training-jersey.jpg" alt="Training Jersey">
+      <h4>Training Jersey</h4>
+      <p class="price">₹899</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <!-- PRINTING (6) -->
+    <div class="product-card printing" data-id="p1" data-name="Custom T-Shirt" data-price="599" data-image="assets/images/products/custom-tshirt.jpg">
+      <img src="assets/images/products/custom-tshirt.jpg" alt="Custom T-Shirt">
+      <h4>Custom T-Shirt</h4>
+      <p class="price">₹599</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card printing" data-id="p2" data-name="Custom Cap" data-price="349" data-image="assets/images/products/custom-cap.jpg">
+      <img src="assets/images/products/custom-cap.jpg" alt="Custom Cap">
+      <h4>Custom Cap</h4>
+      <p class="price">₹349</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card printing" data-id="p3" data-name="Custom Hoodie" data-price="1299" data-image="assets/images/products/custom-hoodie.jpg">
+      <img src="assets/images/products/custom-hoodie.jpg" alt="Custom Hoodie">
+      <h4>Custom Hoodie</h4>
+      <p class="price">₹1,299</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card printing" data-id="p4" data-name="Custom Mug" data-price="249" data-image="assets/images/products/custom-mug.jpg">
+      <img src="assets/images/products/custom-mug.jpg" alt="Custom Mug">
+      <h4>Custom Mug</h4>
+      <p class="price">₹249</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card printing" data-id="p5" data-name="Custom Bag" data-price="799" data-image="assets/images/products/custom-bag.jpg">
+      <img src="assets/images/products/custom-bag.jpg" alt="Custom Bag">
+      <h4>Custom Bag</h4>
+      <p class="price">₹799</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card printing" data-id="p6" data-name="Custom Water Bottle" data-price="399" data-image="assets/images/products/custom-waterbottle.jpg">
+      <img src="assets/images/products/custom-waterbottle.jpg" alt="Custom Water Bottle">
+      <h4>Custom Water Bottle</h4>
+      <p class="price">₹399</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <!-- EQUIPMENT (6) -->
+    <div class="product-card equipment" data-id="e1" data-name="Cricket Bat" data-price="3499" data-image="assets/images/products/cricket-bat.jpg">
+      <img src="assets/images/products/cricket-bat.jpg" alt="Cricket Bat">
+      <h4>Cricket Bat</h4>
+      <p class="price">₹3,499</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card equipment" data-id="e2" data-name="Football" data-price="799" data-image="assets/images/products/football.jpg">
+      <img src="assets/images/products/football.jpg" alt="Football">
+      <h4>Football</h4>
+      <p class="price">₹799</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card equipment" data-id="e3" data-name="Badminton Racket" data-price="1499" data-image="assets/images/products/badminton-racket.jpg">
+      <img src="assets/images/products/badminton-racket.jpg" alt="Badminton Racket">
+      <h4>Badminton Racket</h4>
+      <p class="price">₹1,499</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card equipment" data-id="e4" data-name="Hockey Stick" data-price="2199" data-image="assets/images/products/hockey-stick.jpg">
+      <img src="assets/images/products/hockey-stick.jpg" alt="Hockey Stick">
+      <h4>Hockey Stick</h4>
+      <p class="price">₹2,199</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card equipment" data-id="e5" data-name="Volleyball" data-price="699" data-image="assets/images/products/volleyball.jpg">
+      <img src="assets/images/products/volleyball.jpg" alt="Volleyball">
+      <h4>Volleyball</h4>
+      <p class="price">₹699</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card equipment" data-id="e6" data-name="Tennis Balls (Pack of 6)" data-price="399" data-image="assets/images/products/tennis-ball-pack.jpg">
+      <img src="assets/images/products/tennis-ball-pack.jpg" alt="Tennis Balls Pack">
+      <h4>Tennis Balls (Pack of 6)</h4>
+      <p class="price">₹399</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <!-- FOOTWEAR (6) -->
+    <div class="product-card footwear" data-id="f1" data-name="Sports Shoes" data-price="1999" data-image="assets/images/products/sports-shoes.jpg">
+      <img src="assets/images/products/sports-shoes.jpg" alt="Sports Shoes">
+      <h4>Sports Shoes</h4>
+      <p class="price">₹1,999</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card footwear" data-id="f2" data-name="Running Shoes" data-price="2499" data-image="assets/images/products/running-shoes.jpg">
+      <img src="assets/images/products/running-shoes.jpg" alt="Running Shoes">
+      <h4>Running Shoes</h4>
+      <p class="price">₹2,499</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card footwear" data-id="f3" data-name="Cricket Shoes" data-price="2199" data-image="assets/images/products/cricket-shoes.jpg">
+      <img src="assets/images/products/cricket-shoes.jpg" alt="Cricket Shoes">
+      <h4>Cricket Shoes</h4>
+      <p class="price">₹2,199</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card footwear" data-id="f4" data-name="Football Shoes" data-price="2799" data-image="assets/images/products/football-shoes.jpg">
+      <img src="assets/images/products/football-shoes.jpg" alt="Football Shoes">
+      <h4>Football Shoes</h4>
+      <p class="price">₹2,799</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card footwear" data-id="f5" data-name="Training Shoes" data-price="1899" data-image="assets/images/products/training-shoes.jpg">
+      <img src="assets/images/products/training-shoes.jpg" alt="Training Shoes">
+      <h4>Training Shoes</h4>
+      <p class="price">₹1,899</p>
+      <button class="btn-order">Order Now</button>
+    </div>
+
+    <div class="product-card footwear" data-id="f6" data-name="Basketball Shoes" data-price="2599" data-image="assets/images/products/basketball-shoes.jpg">
+      <img src="assets/images/products/basketball-shoes.jpg" alt="Basketball Shoes">
+      <h4>Basketball Shoes</h4>
+      <p class="price">₹2,599</p>
+      <button class="btn-order">Order Now</button>
     </div>
   </section>
 
@@ -115,7 +242,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- External Scripts -->
+  <script src="assets/js/services.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
