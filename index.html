@@ -19,10 +19,14 @@
     <nav class="navbar">
       <div class="logo">
         <img src="assets/images/logo.png" alt="Anand Sports Logo" class="logo-img">
-        <img src="assets/images/mascot.png" alt="Anand Sports Mascot" class="mascot-img">
+        <img src="assets/images/mascot.png" alt="Anand Sports Mascot Logo" class="mascot-img">
         <h1>Anand Sports</h1>
       </div>
-      <ul class="nav-links">
+
+      <!-- Hamburger Menu (Mobile Only) -->
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Products</a></li>
@@ -57,14 +61,28 @@
     </div>
   </section>
 
-  <!-- Intro Video -->
+  <!-- Intro Video (Split Layout with CTA) -->
   <section class="intro-video">
-    <h3>Watch Our Story</h3>
-    <div class="video-container">
-      <video controls autoplay muted loop>
-        <source src="assets/videos/shop-intro.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="video-grid">
+      <!-- Video -->
+      <div class="video-box">
+        <video id="shopVideo" muted poster="assets/images/mascot.png">
+          <source src="assets/videos/shop-intro.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <!-- Text -->
+      <div class="video-text">
+        <h3>Our Story</h3>
+        <p>
+          At <strong>Anand Sports</strong>, we believe sports bring people together.  
+          From custom jerseys with your name to high-performance shoes and equipment,  
+          we are here to power your passion for the game.  
+          Watch our journey in action!
+        </p>
+        <a href="services.html" class="btn">Shop Now</a>
+      </div>
     </div>
   </section>
 
@@ -73,16 +91,19 @@
     <h3>Featured Items</h3>
     <div class="product-grid">
       <div class="product-card">
-        <img src="assets/images/products/shirt.jpg" alt="Custom Jersey">
-        <p>Custom Jerseys with Name Printing</p>
+        <img src="assets/images/products/shirt.png" alt="Custom Jersey with Name Printing">
+        <h4>Custom Jerseys</h4>
+        <p>Personalized jerseys with your name on the back.</p>
       </div>
       <div class="product-card">
-        <img src="assets/images/products/shoes.jpg" alt="Sports Shoes">
-        <p>High-Performance Sports Shoes</p>
+        <img src="assets/images/products/shoes.png" alt="Sports Shoes">
+        <h4>Sports Shoes</h4>
+        <p>High-performance shoes for every game.</p>
       </div>
       <div class="product-card">
-        <img src="assets/images/products/cricket-bat.jpg" alt="Cricket Bat">
-        <p>Cricket Bats & Equipment</p>
+        <img src="assets/images/products/cricket-bat.png" alt="Cricket Bat">
+        <h4>Cricket Bats</h4>
+        <p>Durable cricket bats & equipment for all levels.</p>
       </div>
     </div>
   </section>
@@ -91,7 +112,8 @@
   <footer>
     <div class="footer-content">
       <p>© 2025 Anand Sports. All rights reserved.</p>
-      <p>Email: info@anandsports.com | Phone: +91-99999-99999</p>
+      <p>Email: <a href="mailto:info@anandsports.com">info@anandsports.com</a> | 
+         Phone: <a href="tel:+919999999999">+91-99999-99999</a></p>
       <p>Follow us on 
         <a href="#">Facebook</a> | 
         <a href="#">Instagram</a> | 
@@ -100,5 +122,7 @@
     </div>
   </footer>
 
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

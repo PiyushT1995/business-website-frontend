@@ -1,0 +1,126 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Headings (consistency) */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222; /* Dark Gray */
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  height: 50px;
+}
+.mascot-img {
+  height: 60px;
+}
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: #ff6600; /* Sports Orange */
+  color: #fff;
+}
+
+/* Hamburger Button (hidden by default) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ff6600; /* Orange */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: #e65c00;
+  transform: translateY(-2px); /* smooth lift */
+}
+.btn-secondary {
+  background: #444;
+  color: #fff; /* improved contrast */
+}
+.btn-secondary:hover {
+  background: #666;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background: #222; /* Dark Gray */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+footer a {
+  color: #ff6600;
+  margin: 0 5px;
+  font-weight: bold;
+}
+footer a:hover {
+  text-decoration: underline;
+}
