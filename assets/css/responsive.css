@@ -8,13 +8,15 @@
   .hero-content h2,
   .services-hero h2,
   .portfolio-hero h2,
-  .blog-hero h2 {
+  .blog-hero h2,
+  .contact-hero h2 {
     font-size: 2.3rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
-  .blog-hero p {
+  .blog-hero p,
+  .contact-hero p {
     font-size: 1.1rem;
   }
 
@@ -40,6 +42,11 @@
   /* Portfolio: Slider */
   .slider {
     max-width: 700px;
+  }
+
+  /* Contact */
+  .contact-grid {
+    gap: 20px;
   }
 }
 
@@ -71,19 +78,22 @@
   .hero,
   .services-hero,
   .portfolio-hero,
-  .blog-hero {
+  .blog-hero,
+  .contact-hero {
     padding: 100px 20px;
   }
   .hero-content h2,
   .services-hero h2,
   .portfolio-hero h2,
-  .blog-hero h2 {
+  .blog-hero h2,
+  .contact-hero h2 {
     font-size: 2rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
-  .blog-hero p {
+  .blog-hero p,
+  .contact-hero p {
     font-size: 1rem;
   }
 
@@ -165,6 +175,21 @@
   .blog-download p {
     font-size: 1rem;
   }
+
+  /* Contact */
+  .contact-grid {
+    grid-template-columns: 1fr; /* stack form & info */
+  }
+  .contact-form,
+  .contact-info {
+    text-align: center;
+  }
+  .contact-form form {
+    width: 100%;
+  }
+  .contact-info p {
+    font-size: 0.95rem;
+  }
 }
 
 /* Small Mobile (up to 480px) */
@@ -173,19 +198,22 @@
   .hero,
   .services-hero,
   .portfolio-hero,
-  .blog-hero {
+  .blog-hero,
+  .contact-hero {
     padding: 80px 15px;
   }
   .hero-content h2,
   .services-hero h2,
   .portfolio-hero h2,
-  .blog-hero h2 {
+  .blog-hero h2,
+  .contact-hero h2 {
     font-size: 1.6rem;
   }
   .hero-content p,
   .services-hero p,
   .portfolio-hero p,
-  .blog-hero p {
+  .blog-hero p,
+  .contact-hero p {
     font-size: 0.95rem;
   }
 
@@ -258,6 +286,22 @@
   .blog-download p {
     font-size: 0.9rem;
   }
+
+  /* Contact */
+  .contact-form h3,
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+  .social-links a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+  .contact-map h3 {
+    font-size: 1.5rem;
+  }
 }
 
 /* Touch feedback (for mobile/touch devices) */
@@ -270,7 +314,8 @@
   .stat-card:active,
   .team-card:active,
   .gallery-grid img:active,
-  .blog-card:active {
+  .blog-card:active,
+  .contact-form button:active {
     transform: scale(0.97);
   }
 }
