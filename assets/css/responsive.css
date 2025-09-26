@@ -4,15 +4,17 @@
 
 /* Tablet (up to 992px) */
 @media (max-width: 992px) {
-  /* Hero */
+  /* Hero Sections */
   .hero-content h2,
   .services-hero h2,
-  .portfolio-hero h2 {
-    font-size: 2.5rem;
+  .portfolio-hero h2,
+  .blog-hero h2 {
+    font-size: 2.3rem;
   }
   .hero-content p,
   .services-hero p,
-  .portfolio-hero p {
+  .portfolio-hero p,
+  .blog-hero p {
     font-size: 1.1rem;
   }
 
@@ -25,7 +27,8 @@
   .highlight-grid,
   .product-grid,
   .category-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .blog-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
@@ -67,17 +70,20 @@
   /* Hero Sections */
   .hero,
   .services-hero,
-  .portfolio-hero {
+  .portfolio-hero,
+  .blog-hero {
     padding: 100px 20px;
   }
   .hero-content h2,
   .services-hero h2,
-  .portfolio-hero h2 {
+  .portfolio-hero h2,
+  .blog-hero h2 {
     font-size: 2rem;
   }
   .hero-content p,
   .services-hero p,
-  .portfolio-hero p {
+  .portfolio-hero p,
+  .blog-hero p {
     font-size: 1rem;
   }
 
@@ -93,7 +99,8 @@
   .highlight-grid,
   .product-grid,
   .category-grid,
-  .gallery-grid {
+  .gallery-grid,
+  .blog-grid {
     grid-template-columns: 1fr;
   }
 
@@ -144,23 +151,41 @@
   .portfolio-video video {
     width: 100%;
   }
+
+  /* Blog */
+  .blog-card {
+    padding: 15px;
+  }
+  .blog-card h4 {
+    font-size: 1.2rem;
+  }
+  .blog-download h3 {
+    font-size: 1.8rem;
+  }
+  .blog-download p {
+    font-size: 1rem;
+  }
 }
 
 /* Small Mobile (up to 480px) */
 @media (max-width: 480px) {
+  /* Hero Sections */
   .hero,
   .services-hero,
-  .portfolio-hero {
+  .portfolio-hero,
+  .blog-hero {
     padding: 80px 15px;
   }
   .hero-content h2,
   .services-hero h2,
-  .portfolio-hero h2 {
-    font-size: 1.8rem;
+  .portfolio-hero h2,
+  .blog-hero h2 {
+    font-size: 1.6rem;
   }
   .hero-content p,
   .services-hero p,
-  .portfolio-hero p {
+  .portfolio-hero p,
+  .blog-hero p {
     font-size: 0.95rem;
   }
 
@@ -193,7 +218,7 @@
     font-size: 1rem;
   }
 
-  /* Services - Custom Printing */
+  /* Services */
   .custom-printing h3 {
     font-size: 1.5rem;
   }
@@ -215,6 +240,24 @@
     font-size: 1.5rem;
     padding: 6px;
   }
+
+  /* Blog */
+  .blog-card h4 {
+    font-size: 1.1rem;
+  }
+  .blog-card p {
+    font-size: 0.9rem;
+  }
+  .read-more {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+  .blog-download h3 {
+    font-size: 1.4rem;
+  }
+  .blog-download p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Touch feedback (for mobile/touch devices) */
@@ -226,7 +269,8 @@
   .value-card:active,
   .stat-card:active,
   .team-card:active,
-  .gallery-grid img:active {
+  .gallery-grid img:active,
+  .blog-card:active {
     transform: scale(0.97);
   }
 }
