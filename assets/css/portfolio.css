@@ -54,7 +54,7 @@
 }
 .slider {
   position: relative;
-  max-width: 800px;
+  max-width: 500px;
   margin: auto;
   overflow: hidden;
 }
